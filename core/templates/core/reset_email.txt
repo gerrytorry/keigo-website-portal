@@ -1,0 +1,4 @@
+Anda meminta pemulihan akun Keigo. Buka tautan berikut untuk mengatur kata sandi baru:
+{{ protocol }}://{{ domain }}{% url "password_reset_confirm" uidb64=uid token=token %}
+
+Jika Anda tidak meminta pemulihan, abaikan email ini. Tautan berlaku satu kali selama satu jam. Jangan bagikan tautan kepada orang lain.

@@ -1,0 +1,5 @@
+# Model keamanan
+Autentikasi password Django PBKDF2, validasi panjang/kemiripan/common password, sesi database dengan cookie HttpOnly/SameSite=Lax. CSRF semua mutasi, POST untuk logout, allowlist field form, autoescaping template, ORM parameterized. Admin diotorisasi server-side is_staff; student ownership selalu dari sesi, bukan input client.
+Dokumen disimpan di PRIVATE_MEDIA_ROOT di luar static; tidak ada URL media publik. Download melalui authorization + Content-Disposition attachment + nosniff + no-store. JPEG/PNG diverifikasi Pillow, PDF diperiksa signature; malware scanning belum otomatis tersedia dan merupakan gerbang sebelum produksi.
+Throttle login/registrasi berbasis hash IP dan identitas, counter database. Proxy terpercaya dan limit request 6MB wajib di staging. SECRET_KEY dari environment pada produksi, DEBUG false, Secure cookies dan HTTPS redirect, ALLOWED_HOSTS eksplisit. Data contoh siswa tidak dibundel. Log audit tidak berisi password atau isi dokumen.
+Uji IDOR, CSRF, role escalation, mass assignment, invalid uploads, concurrency, snapshot dan private downloads wajib. Tidak mengklaim keamanan sempurna.

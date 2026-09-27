@@ -1,0 +1,200 @@
+[
+  [
+    "full_name",
+    "Nama",
+    "氏名",
+    "E5",
+    "text",
+    "Identitas",
+    true
+  ],
+  [
+    "name_kana",
+    "Nama katakana",
+    "氏名",
+    "E4",
+    "text",
+    "Identitas",
+    false
+  ],
+  [
+    "gender",
+    "Jenis kelamin",
+    "性別",
+    "M5",
+    "choice",
+    "Identitas",
+    true
+  ],
+  [
+    "birth_date",
+    "Tanggal lahir",
+    "生年月日",
+    "E6",
+    "date",
+    "Identitas",
+    true
+  ],
+  [
+    "birth_place",
+    "Tempat lahir",
+    "出身",
+    "M7",
+    "text",
+    "Identitas",
+    true
+  ],
+  [
+    "address",
+    "Alamat",
+    "現在住所",
+    "E8",
+    "textarea",
+    "Identitas",
+    true
+  ],
+  [
+    "religion",
+    "Agama",
+    "宗教",
+    "E10",
+    "choice",
+    "Identitas",
+    false
+  ],
+  [
+    "phone",
+    "Telepon",
+    "電話番号",
+    "E11",
+    "tel",
+    "Identitas",
+    true
+  ],
+  [
+    "marital_status",
+    "Status pernikahan",
+    "結婚",
+    "S11",
+    "choice",
+    "Identitas",
+    true
+  ],
+  [
+    "health",
+    "Kondisi kesehatan",
+    "健康状況",
+    "S9",
+    "text",
+    "Fisik",
+    false
+  ],
+  [
+    "blood_type",
+    "Golongan darah",
+    "血液型",
+    "U9",
+    "choice",
+    "Fisik",
+    false
+  ],
+  [
+    "height",
+    "Tinggi badan (cm)",
+    "身長",
+    "O29",
+    "number",
+    "Fisik",
+    true
+  ],
+  [
+    "weight",
+    "Berat badan (kg)",
+    "体重",
+    "T29",
+    "number",
+    "Fisik",
+    true
+  ],
+  [
+    "smoking",
+    "Merokok",
+    "タバコ",
+    "O31",
+    "boolean",
+    "Fisik",
+    true
+  ],
+  [
+    "alcohol",
+    "Alkohol",
+    "お酒・ビール",
+    "T31",
+    "boolean",
+    "Fisik",
+    true
+  ],
+  [
+    "tattoo",
+    "Tato",
+    "刺青",
+    "O33",
+    "boolean",
+    "Fisik",
+    true
+  ],
+  [
+    "passport",
+    "Memiliki paspor",
+    "パスポート",
+    "T33",
+    "boolean",
+    "Fisik",
+    true
+  ],
+  [
+    "study_months",
+    "Lama belajar bahasa Jepang (bulan)",
+    "日本語学習期間",
+    "O27",
+    "number",
+    "Bahasa & karakter",
+    true
+  ],
+  [
+    "japanese_certificate",
+    "Sertifikat kemampuan Jepang",
+    "日本語能力検定",
+    "T27",
+    "choice",
+    "Bahasa & karakter",
+    true
+  ],
+  [
+    "strengths",
+    "Kelebihan",
+    "長所",
+    "G36",
+    "textarea",
+    "Bahasa & karakter",
+    true
+  ],
+  [
+    "weaknesses",
+    "Kekurangan",
+    "短所",
+    "G37",
+    "textarea",
+    "Bahasa & karakter",
+    true
+  ],
+  [
+    "hobbies",
+    "Hobi",
+    "趣味",
+    "G38",
+    "textarea",
+    "Bahasa & karakter",
+    true
+  ]
+]

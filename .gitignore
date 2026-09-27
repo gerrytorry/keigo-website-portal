@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.sqlite3
+*.sqlite3-*
+.local-secret
+.env
+private-media/
+staticfiles/
+.venv/
+
+LOCAL-ACCESS.md

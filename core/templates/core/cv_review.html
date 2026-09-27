@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}{% load static %}{% block content %}
+<div class="workspace-heading"><div><span class="eyebrow">TINJAU CV</span><h1>Pastikan sudah sesuai.</h1><p>Pengajuan CV akan diperiksa oleh admin LPK Keigo.</p></div><a class="button outline" href="/student/cv/">Kembali mengedit</a></div>
+{% if missing_items %}<div class="notice" id="submission-missing"><strong>CV belum dapat diajukan. Lengkapi {{ missing_items|length }} data berikut:</strong><ul>{% for item in missing_items %}<li><a href="{{ item.url }}">{{ item.label }}</a></li>{% endfor %}</ul></div>{% endif %}
+{% if p.submitted_at %}<p class="notice">Pengajuan terakhir: {{ p.submitted_at|date:'d M Y H:i' }} WIB · CV versi {{ p.submitted_version.number }} · Status: {{ p.get_status_display }}.</p>{% endif %}
+<section class="panel">{% include 'core/cv_data.html' %}</section>
+<div id="submission-feedback" class="notice" role="status" aria-live="polite" tabindex="-1" {% if not submission_error %}hidden{% endif %}>{{ submission_error }}</div>
+{% if p.status != 'SUBMITTED' and p.status != 'UNDER_REVIEW' %}
+<form method="post" action="{% url 'cv_review' %}" id="cv-submit-form" class="panel" data-complete="{% if completion.missing %}false{% else %}true{% endif %}">
+{% csrf_token %}<input type="hidden" name="revision" value="{{ p.revision }}">
+<label class="checkbox"><input type="checkbox" name="confirm" value="yes" required>Saya sudah memeriksa dan menyatakan informasi yang diisi sesuai.</label>
+<p class="help">CV akan dikirim kepada admin LPK dan terkunci selama pemeriksaan.</p>
+<button type="submit" class="button" {% if completion.missing %}disabled aria-describedby="submission-missing"{% endif %}>Ajukan CV ke LPK →</button>
+</form>
+{% else %}<p class="notice">CV berhasil diajukan ke LPK. Status: {{ p.get_status_display }}. Tunggu pemeriksaan admin.</p><a class="button" href="/student/">Lihat status di dashboard →</a>{% endif %}
+<script src="{% static 'core/cv-submit.js' %}" defer></script>
+{% endblock %}
